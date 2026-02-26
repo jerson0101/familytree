@@ -1,0 +1,31 @@
+{
+  "name": "@kintree/graph-engine",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./types": "./src/types.ts",
+    "./core": "./src/core/Graph.ts",
+    "./layout": "./src/layout/SugiyamaLayout.ts",
+    "./renderer": "./src/renderer/index.ts",
+    "./genogram": "./src/genogram/GenogramView.tsx"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src/",
+    "clean": "rm -rf dist node_modules"
+  },
+  "dependencies": {
+    "@kintree/shared": "*",
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  }
+}

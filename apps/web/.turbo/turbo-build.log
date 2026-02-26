@@ -1,0 +1,50 @@
+
+
+> @kintree/web@0.1.0 build
+> next build
+
+[1m[38;2;173;127;168m▲ Next.js 16.1.4[39m[22m (Turbopack)
+- Environments: .env.local
+
+[33m[1m⚠[22m[39m The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[37m[1m [22m[39m Creating an optimized production build ...
+[32m[1m✓[22m[39m Compiled successfully in 2.6s
+[?25l[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[1A[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[1A[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[1A[2K[1G[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[1A[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[1A[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[1A[2K[1G[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[1A[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[1A[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[1A[2K[1G[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[1A[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[1A[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[1A[2K[1G[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[1A[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[1A[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[1A[2K[1G[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[1A[2K[1G[37m[1m [22m[39m Running TypeScript  [36m..[39m[2K[1G[1A[2K[1G[37m[1m [22m[39m Running TypeScript  [36m...[39m[2K[1G[1A[2K[1G[37m[1m [22m[39m Running TypeScript  [36m.[39m[2K[1G[1A[2K[1G[?25h[?25l[37m[1m [22m[39m Finished TypeScript in 3.7s  [36m.[39m[2K[1G[1A[2K[1G[1A[2K[1G[?25h[37m[1m [22m[39m Finished TypeScript in 3.7s    [32m[1m✓[22m[39m Finished TypeScript in 3.7s 
+[?25l[37m[1m [22m[39m Collecting page data using 7 workers  [36m.[39m[2K[1G[1A[2K[1G[1A[2K[1G[37m[1m [22m[39m Collecting page data using 7 workers  [36m..[39m[2K[1G[1A[2K[1G[1A[2K[1G[37m[1m [22m[39m Collecting page data using 7 workers  [36m...[39m[2K[1G[1A[2K[1G[1A[2K[1G[?25h[37m[1m [22m[39m Collecting page data using 7 workers in 461.6ms    [32m[1m✓[22m[39m Collecting page data using 7 workers in 461.6ms 
+[?25l[37m[1m [22m[39m Generating static pages using 7 workers (0/24)  [36m[    ][39m[2K[1G[1A[2K[1G[1A[2K[1G[1A[2K[1G[37m[1m [22m[39m Generating static pages using 7 workers (16/24)  [36m[=   ][39m[2K[1G[1A[2K[1G[1A[2K[1G[1A[2K[1G[?25h[32m[1m✓[22m[39m Generating static pages using 7 workers (24/24) in 233.7ms
+[?25l[37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G[1A[2K[1G[1A[2K[1G[?25h[37m[1m [22m[39m Finalizing page optimization in 12.7ms    [32m[1m✓[22m[39m Finalizing page optimization in 12.7ms 
+
+[4mRoute (app)[24m
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/locations
+├ ƒ /api/social
+├ ƒ /api/social/[provider]/callback
+├ ƒ /api/social/[provider]/connect
+├ ƒ /api/social/sync
+├ ƒ /auth/callback
+├ ○ /dyk
+├ ○ /dyk/challenges
+├ ○ /dyk/quiz
+├ ○ /invitations
+├ ○ /login
+├ ○ /register
+├ ○ /security
+├ ○ /security/history
+├ ○ /security/zones
+├ ○ /settings
+├ ○ /settings/members
+├ ○ /settings/suggestions
+├ ○ /social
+├ ○ /social/connect
+├ ○ /tree
+├ ƒ /tree/[personId]
+└ ○ /tree/genogram
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+[?25h⠙[1G[0K

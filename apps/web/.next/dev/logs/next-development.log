@@ -1,0 +1,51 @@
+[00:00:01.802] Server  WARN    ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.830] Server  LOG     ✓ Ready in 1324ms
+[00:00:05.549] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:10.074] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:26.822] Server  LOG     ✓ Compiled in 2.5s
+[00:05:50.718] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:05:56.909] Server  LOG     ✓ Compiled in 219ms
+[00:06:00.660] Server  LOG     ✓ Compiled in 1411ms
+[00:06:01.895] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:01.420] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:11:02.283] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:28.690] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:20:35.158] Server  LOG     ✓ Compiled in 555ms
+[00:20:50.800] Server  LOG     ✓ Compiled in 103ms
+[00:23:17.558] Server  LOG     ✓ Compiled in 1367ms
+[00:24:10.847] Server  LOG     ✓ Compiled in 935ms
+[00:26:48.948] Server  LOG     ✓ Compiled in 578ms
+[00:27:10.676] Server  LOG     ✓ Compiled in 274ms
+[00:30:12.051] Browser ERROR   Error creating invitation: {"code":"PGRST204","details":null,"hint":null,"message":"Could not find the 'inviter_name' column of 'family_invitations' in the schema cache"}
+[00:34:46.196] Server  LOG     ✓ Compiled in 661ms
+[00:35:06.208] Server  LOG     ✓ Compiled in 82ms
+[00:36:50.626] Browser LOG     No family ID found
+[00:38:46.844] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:38:59.895] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:41:01.756] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:41:01.902] Browser LOG     No family ID found
+[00:41:01.902] Browser LOG     No family ID found
+[00:41:17.384] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:48:59.393] Server  LOG     ✓ Compiled in 878ms
+[01:02:05.118] Server  LOG     ✓ Compiled in 3.9s
+[01:02:10.254] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:08:37.905] Server  LOG     ✓ Compiled in 1587ms
+[01:09:46.143] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:09:54.957] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:17:12.949] Server  LOG     ✓ Compiled in 1328ms
+[01:19:11.956] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:19:18.498] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:32:22.396] Server  LOG     ✓ Compiled in 769ms
+[01:37:04.572] Server  LOG     ✓ Compiled in 2.4s
+[01:37:07.955] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:37:09.056] Browser LOG     No family ID found
+[01:37:09.056] Browser LOG     No family ID found
+[01:38:46.785] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:38:46.967] Browser LOG     No family ID found
+[01:38:46.967] Browser LOG     No family ID found
+[01:38:56.112] Browser LOG     No family ID found
+[01:38:56.320] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:39:07.458] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:39:09.616] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:39:15.349] Browser LOG     No family ID found
+[01:39:45.603] Browser LOG     No family ID found

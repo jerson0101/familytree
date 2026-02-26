@@ -1,0 +1,649 @@
+@import "tailwindcss";
+@source "../../../packages/ui";
+
+:root {
+  /* Primary - Warm Coral */
+  --color-primary-50: #fff5f3;
+  --color-primary-100: #ffe8e4;
+  --color-primary-200: #ffd4cc;
+  --color-primary-300: #ffb3a6;
+  --color-primary-400: #ff8a75;
+  --color-primary-500: #ff6b47;
+  --color-primary-600: #f04d26;
+  --color-primary-700: #cc3d1a;
+  --color-primary-800: #a33419;
+  --color-primary-900: #862f1b;
+
+  /* Secondary - Teal */
+  --color-secondary-50: #f0fdfa;
+  --color-secondary-100: #ccfbf1;
+  --color-secondary-200: #99f6e4;
+  --color-secondary-300: #5eead4;
+  --color-secondary-400: #2dd4bf;
+  --color-secondary-500: #14b8a6;
+  --color-secondary-600: #0d9488;
+  --color-secondary-700: #0f766e;
+  --color-secondary-800: #115e59;
+  --color-secondary-900: #134e4a;
+
+  /* Accent - Amber Golden */
+  --color-accent-50: #fffbeb;
+  --color-accent-100: #fef3c7;
+  --color-accent-200: #fde68a;
+  --color-accent-300: #fcd34d;
+  --color-accent-400: #fbbf24;
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706;
+  --color-accent-700: #b45309;
+  --color-accent-800: #92400e;
+  --color-accent-900: #78350f;
+}
+
+@theme {
+  --color-primary-50: var(--color-primary-50);
+  --color-primary-100: var(--color-primary-100);
+  --color-primary-200: var(--color-primary-200);
+  --color-primary-300: var(--color-primary-300);
+  --color-primary-400: var(--color-primary-400);
+  --color-primary-500: var(--color-primary-500);
+  --color-primary-600: var(--color-primary-600);
+  --color-primary-700: var(--color-primary-700);
+  --color-primary-800: var(--color-primary-800);
+  --color-primary-900: var(--color-primary-900);
+
+  --color-secondary-50: var(--color-secondary-50);
+  --color-secondary-100: var(--color-secondary-100);
+  --color-secondary-200: var(--color-secondary-200);
+  --color-secondary-300: var(--color-secondary-300);
+  --color-secondary-400: var(--color-secondary-400);
+  --color-secondary-500: var(--color-secondary-500);
+  --color-secondary-600: var(--color-secondary-600);
+  --color-secondary-700: var(--color-secondary-700);
+  --color-secondary-800: var(--color-secondary-800);
+  --color-secondary-900: var(--color-secondary-900);
+
+  --color-accent-50: var(--color-accent-50);
+  --color-accent-100: var(--color-accent-100);
+  --color-accent-200: var(--color-accent-200);
+  --color-accent-300: var(--color-accent-300);
+  --color-accent-400: var(--color-accent-400);
+  --color-accent-500: var(--color-accent-500);
+  --color-accent-600: var(--color-accent-600);
+  --color-accent-700: var(--color-accent-700);
+  --color-accent-800: var(--color-accent-800);
+  --color-accent-900: var(--color-accent-900);
+
+  --font-sans: var(--font-inter);
+}
+
+/* Safe area padding for mobile */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* ========================================
+   GLASSMORPHISM EFFECTS
+   ======================================== */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-subtle {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   GRADIENT BACKGROUNDS
+   ======================================== */
+.bg-gradient-hero {
+  background: linear-gradient(135deg, #ff6b47 0%, #fbbf24 100%);
+}
+
+.bg-gradient-hero-soft {
+  background: linear-gradient(135deg, #fff5f3 0%, #fffbeb 100%);
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+}
+
+.bg-gradient-mesh {
+  background:
+    radial-gradient(at 40% 20%, rgba(255, 107, 71, 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(251, 191, 36, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(20, 184, 166, 0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, rgba(255, 107, 71, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(251, 191, 36, 0.08) 0px, transparent 50%);
+}
+
+.bg-gradient-radial {
+  background: radial-gradient(ellipse at center, rgba(255, 107, 71, 0.1) 0%, transparent 70%);
+}
+
+.bg-gradient-sidebar {
+  background: linear-gradient(180deg, rgba(255, 107, 71, 0.03) 0%, rgba(20, 184, 166, 0.02) 100%);
+}
+
+/* Gradient text */
+.text-gradient-primary {
+  background: linear-gradient(135deg, #ff6b47 0%, #f04d26 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-hero {
+  background: linear-gradient(135deg, #ff6b47 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+   ENHANCED SHADOWS
+   ======================================== */
+.shadow-elevated {
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.shadow-elevated-lg {
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.08),
+    0 24px 60px rgba(0, 0, 0, 0.12);
+}
+
+.shadow-glow-primary {
+  box-shadow: 0 0 40px rgba(255, 107, 71, 0.3);
+}
+
+.shadow-glow-primary-sm {
+  box-shadow: 0 0 20px rgba(255, 107, 71, 0.2);
+}
+
+.shadow-glow-secondary {
+  box-shadow: 0 0 40px rgba(20, 184, 166, 0.3);
+}
+
+.shadow-glow-accent {
+  box-shadow: 0 0 40px rgba(245, 158, 11, 0.3);
+}
+
+/* Colored shadows for buttons */
+.shadow-primary {
+  box-shadow: 0 4px 14px rgba(255, 107, 71, 0.35);
+}
+
+.shadow-secondary {
+  box-shadow: 0 4px 14px rgba(20, 184, 166, 0.35);
+}
+
+.shadow-accent {
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+}
+
+/* ========================================
+   ANIMATIONS - Keyframes
+   ======================================== */
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* ========================================
+   ANIMATION UTILITIES
+   ======================================== */
+.animate-shimmer {
+  animation: shimmer 2s infinite linear;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out forwards;
+}
+
+.animate-slide-down {
+  animation: slide-down 0.5s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.5s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
+}
+
+/* Animation delays */
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+.animation-delay-700 {
+  animation-delay: 700ms;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1000ms;
+}
+
+/* Staggered animation for children */
+.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 100ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 200ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 300ms; }
+.stagger-children > *:nth-child(5) { animation-delay: 400ms; }
+.stagger-children > *:nth-child(6) { animation-delay: 500ms; }
+
+/* ========================================
+   HOVER & TRANSITION UTILITIES
+   ======================================== */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+.hover-lift-lg {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift-lg:hover {
+  transform: translateY(-4px);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.hover-glow-primary {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow-primary:hover {
+  box-shadow: 0 0 30px rgba(255, 107, 71, 0.25);
+}
+
+/* ========================================
+   DECORATIVE ELEMENTS
+   ======================================== */
+.decorative-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.decorative-circle-primary {
+  background: radial-gradient(circle, rgba(255, 107, 71, 0.15) 0%, transparent 70%);
+}
+
+.decorative-circle-secondary {
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, transparent 70%);
+}
+
+.decorative-circle-accent {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
+}
+
+/* Gradient border effect */
+.border-gradient {
+  position: relative;
+  background: white;
+  border-radius: inherit;
+}
+
+.border-gradient::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #ff6b47, #fbbf24);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* ========================================
+   FOCUS STYLES
+   ======================================== */
+*:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   SCROLLBAR STYLES
+   ======================================== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3;
+}
+
+/* Hide scrollbar on iOS */
+@supports (-webkit-touch-callout: none) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings: "rlig" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   CARD VARIANTS (Global)
+   ======================================== */
+.card-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, rgba(255, 107, 71, 0.05) 0%, rgba(251, 191, 36, 0.05) 100%);
+  border: 1px solid rgba(255, 107, 71, 0.1);
+}
+
+.card-feature {
+  background: white;
+  border: 1px solid transparent;
+  background-image: linear-gradient(white, white), linear-gradient(135deg, rgba(255, 107, 71, 0.2), rgba(251, 191, 36, 0.2));
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+}
+
+/* ========================================
+   BUTTON GRADIENT STYLES (Global)
+   ======================================== */
+.btn-gradient-primary {
+  background: linear-gradient(135deg, #ff6b47 0%, #f04d26 100%);
+  color: white;
+  box-shadow: 0 4px 14px rgba(255, 107, 71, 0.35);
+}
+
+.btn-gradient-primary:hover {
+  background: linear-gradient(135deg, #f04d26 0%, #cc3d1a 100%);
+  box-shadow: 0 6px 20px rgba(255, 107, 71, 0.45);
+}
+
+.btn-gradient-secondary {
+  background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+  color: white;
+  box-shadow: 0 4px 14px rgba(20, 184, 166, 0.35);
+}
+
+.btn-gradient-accent {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+}
+
+/* ========================================
+   AVATAR GRADIENT BACKGROUNDS
+   ======================================== */
+.avatar-gradient-1 {
+  background: linear-gradient(135deg, #ff6b47, #fbbf24);
+}
+
+.avatar-gradient-2 {
+  background: linear-gradient(135deg, #14b8a6, #06b6d4);
+}
+
+.avatar-gradient-3 {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+}
+
+.avatar-gradient-4 {
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+
+.avatar-gradient-5 {
+  background: linear-gradient(135deg, #10b981, #3b82f6);
+}
+
+/* ========================================
+   PROGRESS BAR GRADIENTS
+   ======================================== */
+.progress-gradient-primary {
+  background: linear-gradient(90deg, #ff6b47, #fbbf24);
+}
+
+.progress-gradient-secondary {
+  background: linear-gradient(90deg, #14b8a6, #06b6d4);
+}
+
+/* ========================================
+   INDICATOR STYLES
+   ======================================== */
+.indicator-active {
+  position: relative;
+}
+
+.indicator-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-primary-500);
+}
+
+.indicator-dot-animated {
+  position: relative;
+}
+
+.indicator-dot-animated::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-primary-500);
+  animation: pulse-glow 2s ease-in-out infinite;
+}

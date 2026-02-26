@@ -1,0 +1,422 @@
+
+> @kintree/web@0.1.0 lint
+> eslint .
+
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/dyk/challenges/page.tsx
+  142:49  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  167:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/dyk/quiz/page.tsx
+  15:43  warning  'stats' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+  33:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/dyk/quiz/page.tsx:33:7
+  31 |       questionsLoadedRef.current = true;
+  32 |       const questions = getQuizQuestions(10);
+> 33 |       setQuizQuestions(questions);
+     |       ^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  34 |
+  35 |       if (questions.length === 0) {
+  36 |         setQuizComplete(true);  react-hooks/set-state-in-effect
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/invitations/page.tsx
+  8:3  warning  'Badge' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/layout.tsx
+   84:11  warning  'unreadCount' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+   91:6   warning  React Hook useEffect has a missing dependency: 'refreshInvitations'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         react-hooks/exhaustive-deps
+  103:9   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/layout.tsx:103:9
+  101 |         router.push('/login');
+  102 |       } else {
+> 103 |         setIsCheckingAuth(false);
+      |         ^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  104 |       }
+  105 |     }
+  106 |   }, [isAuthenticated, authLoading, router]);               react-hooks/set-state-in-effect
+  110:5   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/layout.tsx:110:5
+  108 |   // Close mobile menu on route change
+  109 |   useEffect(() => {
+> 110 |     setMobileMenuOpen(false);
+      |     ^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  111 |   }, [pathname]);
+  112 |
+  113 |   // Prevent body scroll when mobile menu is open  react-hooks/set-state-in-effect
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/page.tsx
+   16:20   warning  'unions' is assigned a value but never used                      @typescript-eslint/no-unused-vars
+  172:48   error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  205:100  error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  208:9    warning  'user' is assigned a value but never used                        @typescript-eslint/no-unused-vars
+  228:16   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  282:40   error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/security/history/page.tsx
+  91:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/security/zones/page.tsx
+   7:3   warning  'CardHeader' is defined but never used    @typescript-eslint/no-unused-vars
+  69:32  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/settings/page.tsx
+  8:3  warning  'Badge' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/settings/suggestions/page.tsx
+  7:3  warning  'CardHeader' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/social/connect/page.tsx
+   78:6   warning  React Hook useEffect has a missing dependency: 'fetchConnectedAccounts'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  101:67  error    Unexpected any. Specify a different type                                                                                   @typescript-eslint/no-explicit-any
+  123:6   warning  React Hook useEffect has a missing dependency: 'fetchConnectedAccounts'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/social/page.tsx
+   11:3   warning  'Badge' is defined but never used                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+   38:15  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+   39:10  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  101:72  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  214:25  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  214:83  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  329:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/tree/[personId]/page.tsx
+    5:8   warning  'Link' is defined but never used                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+   18:3   warning  'Timeline' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+   19:3   warning  'TimelineItem' is defined but never used                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+   73:11  warning  'currentFamily' is assigned a value but never used                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  185:46  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  204:40  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  336:40  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  677:27  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/tree/page.tsx
+  75:10  warning  'searchQuery' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  84:10  warning  'invitationSent' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/actions/social.ts
+  6:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/api/locations/route.ts
+  39:9   warning  'familyId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  89:12  warning  'error' is defined but never used              @typescript-eslint/no-unused-vars
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/api/social/[provider]/callback/route.ts
+  109:22  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  216:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/api/social/route.ts
+  54:9  warning  'familyId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/api/social/sync/route.ts
+  38:16  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  68:47  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  90:43  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/components/FamilyMap.tsx
+  48:13  error    A `require()` style import is forbidden                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           @typescript-eslint/no-require-imports
+  53:9   warning  'borderWidth' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+  90:5   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/components/FamilyMap.tsx:90:5
+  88 |
+  89 |   useEffect(() => {
+> 90 |     setIsClient(true);
+     |     ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  91 |     // Load Leaflet CSS
+  92 |     const link = document.createElement('link');
+  93 |     link.rel = 'stylesheet';  react-hooks/set-state-in-effect
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/components/LocationPermissionModal.tsx
+  38:14  warning  'err' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/components/social/CreatePostForm.tsx
+  32:18  warning  'err' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useDYKQuiz.ts
+  211:38  error  Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `currentFamily`, but the source dependencies were [currentFamily?.id, supabase]. Inferred less specific property than source.
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useDYKQuiz.ts:211:38
+  209 |
+  210 |   // Fetch existing responses from database
+> 211 |   const fetchResponses = useCallback(async () => {
+      |                                      ^^^^^^^^^^^^^
+> 212 |     if (!currentFamily?.id) return;
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 213 |
+      …
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 244 |     }
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 245 |   }, [currentFamily?.id, supabase]);
+      | ^^^^ Could not preserve existing manual memoization
+  246 |
+  247 |   // Calculate stats
+  248 |   useEffect(() => {                                                                                                                                                                                                          react-hooks/preserve-manual-memoization
+  234:68  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-explicit-any
+  278:5   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useDYKQuiz.ts:278:5
+  276 |     });
+  277 |
+> 278 |     setStats({
+      |     ^^^^^^^^ Avoid calling setState() directly within an effect
+  279 |       totalQuestions,
+  280 |       answered,
+  281 |       correct,                                                                                                                                                                                                                                                                                                                                                                          react-hooks/set-state-in-effect
+  290:5   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useDYKQuiz.ts:290:5
+  288 |   // Load questions and responses
+  289 |   useEffect(() => {
+> 290 |     setIsLoading(true);
+      |     ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  291 |     const generated = generateQuestions();
+  292 |     setQuestions(generated);
+  293 |     fetchResponses().finally(() => setIsLoading(false));                                                                                                                                                                                                                                   react-hooks/set-state-in-effect
+  297:36  error  Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `currentFamily`, but the source dependencies were [currentFamily?.id, questions, supabase]. Inferred less specific property than source.
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useDYKQuiz.ts:297:36
+  295 |
+  296 |   // Submit answer
+> 297 |   const submitAnswer = useCallback(async (questionId: string, answer: string): Promise<boolean> => {
+      |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 298 |     if (!currentFamily?.id) return false;
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 299 |
+      …
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 373 |     }
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 374 |   }, [currentFamily?.id, questions, supabase]);
+      | ^^^^ Could not preserve existing manual memoization
+  375 |
+  376 |   // Get unanswered questions for quiz
+  377 |   const getQuizQuestions = useCallback((count: number = 10): QuizQuestion[] => {  react-hooks/preserve-manual-memoization
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useFamily.ts
+   41:6   warning  React Hook useEffect has missing dependencies: 'fetchFamilies' and 'reset'. Either include them or remove the dependency array         react-hooks/exhaustive-deps
+   49:6   warning  React Hook useEffect has missing dependencies: 'fetchMembers' and 'fetchUserRole'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+   78:21  error    Unexpected any. Specify a different type                                                                                               @typescript-eslint/no-explicit-any
+   79:18  error    Unexpected any. Specify a different type                                                                                               @typescript-eslint/no-explicit-any
+   80:30  error    Unexpected any. Specify a different type                                                                                               @typescript-eslint/no-explicit-any
+   81:32  error    Unexpected any. Specify a different type                                                                                               @typescript-eslint/no-explicit-any
+   82:39  error    Unexpected any. Specify a different type                                                                                               @typescript-eslint/no-explicit-any
+   83:40  error    Unexpected any. Specify a different type                                                                                               @typescript-eslint/no-explicit-any
+   84:37  error    Unexpected any. Specify a different type                                                                                               @typescript-eslint/no-explicit-any
+  100:6   warning  React Hook useCallback has a missing dependency: 'supabase'. Either include it or remove the dependency array                          react-hooks/exhaustive-deps
+  120:44  error    Unexpected any. Specify a different type                                                                                               @typescript-eslint/no-explicit-any
+  121:39  error    Unexpected any. Specify a different type                                                                                               @typescript-eslint/no-explicit-any
+  130:47  error    Unexpected any. Specify a different type                                                                                               @typescript-eslint/no-explicit-any
+  130:55  error    Unexpected any. Specify a different type                                                                                               @typescript-eslint/no-explicit-any
+  137:63  error    Unexpected any. Specify a different type                                                                                               @typescript-eslint/no-explicit-any
+  162:6   warning  React Hook useCallback has a missing dependency: 'supabase'. Either include it or remove the dependency array                          react-hooks/exhaustive-deps
+  184:6   warning  React Hook useCallback has a missing dependency: 'supabase'. Either include it or remove the dependency array                          react-hooks/exhaustive-deps
+  226:6   warning  React Hook useCallback has a missing dependency: 'supabase'. Either include it or remove the dependency array                          react-hooks/exhaustive-deps
+  274:6   warning  React Hook useCallback has a missing dependency: 'supabase'. Either include it or remove the dependency array                          react-hooks/exhaustive-deps
+  293:6   warning  React Hook useCallback has a missing dependency: 'supabase'. Either include it or remove the dependency array                          react-hooks/exhaustive-deps
+  312:6   warning  React Hook useCallback has a missing dependency: 'supabase'. Either include it or remove the dependency array                          react-hooks/exhaustive-deps
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useFamilyInvitations.ts
+   55:62  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+   56:62  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+   63:71  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+   64:70  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+   67:34  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  102:58  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  103:58  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  115:56  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  116:55  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  119:30  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  194:15  warning  'data' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useFamilyTree.ts
+   27:23  error    Unexpected any. Specify a different type                                                                          @typescript-eslint/no-explicit-any
+  115:6   warning  React Hook useEffect has a missing dependency: 'fetchTreeData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  143:52  error    Unexpected any. Specify a different type                                                                          @typescript-eslint/no-explicit-any
+  156:65  error    Unexpected any. Specify a different type                                                                          @typescript-eslint/no-explicit-any
+  181:40  error    Unexpected any. Specify a different type                                                                          @typescript-eslint/no-explicit-any
+  187:62  error    Unexpected any. Specify a different type                                                                          @typescript-eslint/no-explicit-any
+  199:83  error    Unexpected any. Specify a different type                                                                          @typescript-eslint/no-explicit-any
+  217:6   warning  React Hook useCallback has a missing dependency: 'supabase'. Either include it or remove the dependency array     react-hooks/exhaustive-deps
+  239:33  error    Unexpected any. Specify a different type                                                                          @typescript-eslint/no-explicit-any
+  249:86  error    Unexpected any. Specify a different type                                                                          @typescript-eslint/no-explicit-any
+  304:6   warning  React Hook useCallback has a missing dependency: 'supabase'. Either include it or remove the dependency array     react-hooks/exhaustive-deps
+  308:40  error    Unexpected any. Specify a different type                                                                          @typescript-eslint/no-explicit-any
+  334:6   warning  React Hook useCallback has a missing dependency: 'supabase'. Either include it or remove the dependency array     react-hooks/exhaustive-deps
+  351:6   warning  React Hook useCallback has a missing dependency: 'supabase'. Either include it or remove the dependency array     react-hooks/exhaustive-deps
+  396:6   warning  React Hook useCallback has a missing dependency: 'supabase'. Either include it or remove the dependency array     react-hooks/exhaustive-deps
+  421:6   warning  React Hook useCallback has a missing dependency: 'supabase'. Either include it or remove the dependency array     react-hooks/exhaustive-deps
+  455:6   warning  React Hook useCallback has a missing dependency: 'supabase'. Either include it or remove the dependency array     react-hooks/exhaustive-deps
+  786:6   warning  React Hook useCallback has a missing dependency: 'unions'. Either include it or remove the dependency array       react-hooks/exhaustive-deps
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useLocationTracking.ts
+  155:38  error    Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `currentFamily`, but the source dependencies were [currentFamily?.id, supabase, reverseGeocode]. Inferred less specific property than source.
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useLocationTracking.ts:155:38
+  153 |
+  154 |   // Update location in database
+> 155 |   const updateLocation = useCallback(async (location: LocationData) => {
+      |                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 156 |     if (!currentFamily?.id) return;
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 157 |
+      …
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 207 |     }
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 208 |   }, [currentFamily?.id, supabase, reverseGeocode]);
+      | ^^^^ Could not preserve existing manual memoization
+  209 |
+  210 |   // Start tracking location
+  211 |   const startTracking = useCallback(() => {                                react-hooks/preserve-manual-memoization
+  175:47  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-explicit-any
+  205:14  warning  'err' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+  247:44  error    Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `currentFamily`, but the source dependencies were [currentFamily?.id, supabase]. Inferred less specific property than source.
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useLocationTracking.ts:247:44
+  245 |
+  246 |   // Fetch family members' locations
+> 247 |   const fetchFamilyLocations = useCallback(async () => {
+      |                                            ^^^^^^^^^^^^^
+> 248 |     if (!currentFamily?.id) {
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 249 |       setFamilyLocations([]);
+      …
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 286 |     }
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 287 |   }, [currentFamily?.id, supabase]);
+      | ^^^^ Could not preserve existing manual memoization
+  288 |
+  289 |   // Load settings
+  290 |   const loadSettings = useCallback(async () => {                                                                                           react-hooks/preserve-manual-memoization
+  264:72  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             @typescript-eslint/no-explicit-any
+  283:14  warning  'err' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+  290:36  error    Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `currentFamily`, but the source dependencies were [currentFamily?.id, supabase]. Inferred less specific property than source.
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useLocationTracking.ts:290:36
+  288 |
+  289 |   // Load settings
+> 290 |   const loadSettings = useCallback(async () => {
+      |                                    ^^^^^^^^^^^^^
+> 291 |     if (!currentFamily?.id) return;
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 292 |
+      …
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 319 |     }
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 320 |   }, [currentFamily?.id, supabase]);
+      | ^^^^ Could not preserve existing manual memoization
+  321 |
+  322 |   // Save settings
+  323 |   const saveSettings = useCallback(async (newSettings: Partial<LocationSharingSettings>) => {                                                                                      react-hooks/preserve-manual-memoization
+  317:14  warning  'err' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+  323:36  error    Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `currentFamily`, but the source dependencies were [currentFamily?.id, supabase, settings]. Inferred less specific property than source.
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useLocationTracking.ts:323:36
+  321 |
+  322 |   // Save settings
+> 323 |   const saveSettings = useCallback(async (newSettings: Partial<LocationSharingSettings>) => {
+      |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 324 |     if (!currentFamily?.id) return;
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 325 |
+      …
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 355 |     }
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 356 |   }, [currentFamily?.id, supabase, settings]);
+      | ^^^^ Could not preserve existing manual memoization
+  357 |
+  358 |   // Enable location sharing
+  359 |   const enableLocationSharing = useCallback(async () => {  react-hooks/preserve-manual-memoization
+  353:14  warning  'err' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+  396:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useLocationTracking.ts:396:7
+  394 |   useEffect(() => {
+  395 |     if (settings.shareLocation && permissionStatus === 'granted') {
+> 396 |       setIsTracking(true);
+      |       ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  397 |       const cleanup = startTracking();
+  398 |       return () => {
+  399 |         if (cleanup) cleanup();                                                                                                                                                       react-hooks/set-state-in-effect
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useNotifications.ts
+  13:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  44:59  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  87:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useTreeLayout.ts
+  55:37  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/stores/authStore.ts
+  74:11  warning  'get' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 125 problems (75 errors, 50 warnings)
+
+npm error Lifecycle script `lint` failed with error:
+npm error code 1
+npm error path /Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web
+npm error workspace @kintree/web@0.1.0
+npm error location /Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web
+npm error command failed
+npm error command sh -c eslint .

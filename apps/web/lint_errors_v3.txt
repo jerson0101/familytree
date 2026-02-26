@@ -1,0 +1,198 @@
+
+> @kintree/web@0.1.0 lint
+> eslint .
+
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/dyk/challenges/page.tsx
+  142:49  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  167:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/dyk/quiz/page.tsx
+  15:43  warning  'stats' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    @typescript-eslint/no-unused-vars
+  33:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/dyk/quiz/page.tsx:33:7
+  31 |       questionsLoadedRef.current = true;
+  32 |       const questions = getQuizQuestions(10);
+> 33 |       setQuizQuestions(questions);
+     |       ^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  34 |
+  35 |       if (questions.length === 0) {
+  36 |         setQuizComplete(true);  react-hooks/set-state-in-effect
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/layout.tsx
+   18:10  warning  'useNotifications' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+  103:9   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/layout.tsx:103:9
+  101 |         router.push('/login');
+  102 |       } else {
+> 103 |         setIsCheckingAuth(false);
+      |         ^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  104 |       }
+  105 |     }
+  106 |   }, [isAuthenticated, authLoading, router]);               react-hooks/set-state-in-effect
+  110:5   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/layout.tsx:110:5
+  108 |   // Close mobile menu on route change
+  109 |   useEffect(() => {
+> 110 |     setMobileMenuOpen(false);
+      |     ^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  111 |   }, [pathname]);
+  112 |
+  113 |   // Prevent body scroll when mobile menu is open  react-hooks/set-state-in-effect
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/page.tsx
+   16:20   warning  'unions' is assigned a value but never used                      @typescript-eslint/no-unused-vars
+  172:48   error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  205:100  error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+  208:9    warning  'user' is assigned a value but never used                        @typescript-eslint/no-unused-vars
+  228:16   error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  282:40   error    Unexpected any. Specify a different type                         @typescript-eslint/no-explicit-any
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/security/history/page.tsx
+  91:35  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/security/zones/page.tsx
+  68:32  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/social/connect/page.tsx
+   78:6   warning  React Hook useEffect has a missing dependency: 'fetchConnectedAccounts'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  101:67  error    Unexpected any. Specify a different type                                                                                   @typescript-eslint/no-explicit-any
+  123:6   warning  React Hook useEffect has a missing dependency: 'fetchConnectedAccounts'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/social/page.tsx
+   11:3   warning  'Badge' is defined but never used                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+   38:15  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+   39:10  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  101:72  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  214:25  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  214:83  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  329:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/tree/[personId]/page.tsx
+    5:8   warning  'Link' is defined but never used                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+   18:3   warning  'Timeline' is defined but never used                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+   19:3   warning  'TimelineItem' is defined but never used                                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+   73:11  warning  'currentFamily' is assigned a value but never used                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  185:46  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  204:40  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  336:40  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+  677:27  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/(dashboard)/tree/page.tsx
+  75:10  warning  'searchQuery' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  84:10  warning  'invitationSent' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/actions/social.ts
+  6:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/api/locations/route.ts
+  39:9   warning  'familyId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  89:12  warning  'error' is defined but never used              @typescript-eslint/no-unused-vars
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/api/social/[provider]/callback/route.ts
+  109:22  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  216:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/api/social/route.ts
+  54:9  warning  'familyId' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/app/api/social/sync/route.ts
+  38:16  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  68:47  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  90:43  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/components/FamilyMap.tsx
+  48:13  error    A `require()` style import is forbidden                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           @typescript-eslint/no-require-imports
+  53:9   warning  'borderWidth' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+  90:5   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/components/FamilyMap.tsx:90:5
+  88 |
+  89 |   useEffect(() => {
+> 90 |     setIsClient(true);
+     |     ^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  91 |     // Load Leaflet CSS
+  92 |     const link = document.createElement('link');
+  93 |     link.rel = 'stylesheet';  react-hooks/set-state-in-effect
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/components/LocationPermissionModal.tsx
+  38:14  warning  'err' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/components/social/CreatePostForm.tsx
+  32:18  warning  'err' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useFamily.ts
+   61:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   62:18  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   63:30  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   64:32  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   65:39  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   66:40  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   67:37  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  103:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  104:39  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  113:47  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  113:55  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  120:63  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useFamilyTree.ts
+   28:24  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   76:23  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  850:38  warning  'personId' is defined but never used      @typescript-eslint/no-unused-vars
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useLocationTracking.ts
+  175:47  error    Unexpected any. Specify a different type                                                              @typescript-eslint/no-explicit-any
+  205:14  warning  'err' is defined but never used                                                                       @typescript-eslint/no-unused-vars
+  206:7   warning  Unused eslint-disable directive (no problems were reported from '@typescript-eslint/no-unused-vars')
+  228:8   warning  'err' is defined but never used                                                                       @typescript-eslint/no-unused-vars
+  229:9   warning  Unused eslint-disable directive (no problems were reported from '@typescript-eslint/no-unused-vars')
+  262:72  error    Unexpected any. Specify a different type                                                              @typescript-eslint/no-explicit-any
+  281:14  warning  'err' is defined but never used                                                                       @typescript-eslint/no-unused-vars
+  282:7   warning  Unused eslint-disable directive (no problems were reported from '@typescript-eslint/no-unused-vars')
+  316:14  warning  'err' is defined but never used                                                                       @typescript-eslint/no-unused-vars
+  317:7   warning  Unused eslint-disable directive (no problems were reported from '@typescript-eslint/no-unused-vars')
+  353:14  warning  'err' is defined but never used                                                                       @typescript-eslint/no-unused-vars
+  354:7   warning  Unused eslint-disable directive (no problems were reported from '@typescript-eslint/no-unused-vars')
+
+/Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web/src/hooks/useNotifications.ts
+  13:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  44:59  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  87:21  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+✖ 79 problems (47 errors, 32 warnings)
+  0 errors and 5 warnings potentially fixable with the `--fix` option.
+
+npm error Lifecycle script `lint` failed with error:
+npm error code 1
+npm error path /Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web
+npm error workspace @kintree/web@0.1.0
+npm error location /Users/smsm/Desktop/Portafolio IA/arbol-genealogico-digital 2/apps/web
+npm error command failed
+npm error command sh -c eslint .

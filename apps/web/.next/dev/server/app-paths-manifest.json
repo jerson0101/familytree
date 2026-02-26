@@ -1,0 +1,16 @@
+{
+  "/(auth)/login/page": "app/(auth)/login/page.js",
+  "/(dashboard)/dyk/page": "app/(dashboard)/dyk/page.js",
+  "/(dashboard)/dyk/quiz/page": "app/(dashboard)/dyk/quiz/page.js",
+  "/(dashboard)/invitations/page": "app/(dashboard)/invitations/page.js",
+  "/(dashboard)/page": "app/(dashboard)/page.js",
+  "/(dashboard)/security/page": "app/(dashboard)/security/page.js",
+  "/(dashboard)/security/zones/page": "app/(dashboard)/security/zones/page.js",
+  "/(dashboard)/settings/page": "app/(dashboard)/settings/page.js",
+  "/(dashboard)/social/page": "app/(dashboard)/social/page.js",
+  "/(dashboard)/tree/[personId]/page": "app/(dashboard)/tree/[personId]/page.js",
+  "/(dashboard)/tree/genogram/page": "app/(dashboard)/tree/genogram/page.js",
+  "/(dashboard)/tree/page": "app/(dashboard)/tree/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/auth/callback/route": "app/auth/callback/route.js"
+}

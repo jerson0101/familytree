@@ -1,0 +1,5 @@
+
+
+> @kintree/graph-engine@0.1.0 lint
+> eslint src/
+
