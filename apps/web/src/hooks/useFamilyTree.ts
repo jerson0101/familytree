@@ -63,7 +63,13 @@ export interface CreatePersonInput {
   lastName?: string;
   gender: Gender;
   birthDate?: string;
+  birthDateApproximate?: boolean;
+  birthPlace?: string;
+  deathDate?: string;
+  deathDateApproximate?: boolean;
+  deathPlace?: string;
   isLiving?: boolean;
+  biography?: string;
   photoUrl?: string;
   medicalConditions?: MedicalCondition[];
 }
@@ -542,6 +548,12 @@ export function useFamilyTree() {
           last_name: input.lastName,
           gender: input.gender,
           birth_date: input.birthDate,
+          birth_date_approximate: input.birthDateApproximate,
+          birth_place: input.birthPlace,
+          death_date: input.deathDate,
+          death_date_approximate: input.deathDateApproximate,
+          death_place: input.deathPlace,
+          biography: input.biography,
           is_living: input.isLiving ?? true,
           photo_url: input.photoUrl,
           medical_conditions: input.medicalConditions || null,
